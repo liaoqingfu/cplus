@@ -394,7 +394,6 @@ public:
 	AsyncLogWriter():
 		exit_flag_(false)
 	{
-		printf("AsyncLogWriter create\n");
 		// 创建一个线程并运行
 		if (int retval = pthread_create(&mId, 0, threadWrapper, this))
 	    {
@@ -468,7 +467,6 @@ protected:
 
 static void* threadWrapper(void* parm)
 {
-   	printf("threadWrapper\n");
     AsyncLogWriter* t = static_cast<AsyncLogWriter*> (parm);
  
     t->run();
