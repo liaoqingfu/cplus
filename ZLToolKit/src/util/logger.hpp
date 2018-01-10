@@ -387,10 +387,6 @@ extern "C"
 static void* threadWrapper(void* parm);
 }
 
-void run2(int i)  
-{  
-	printf("test run i  = %d\n", i);
-} 
 
 class AsyncLogWriter: public LogWriter 
 {
